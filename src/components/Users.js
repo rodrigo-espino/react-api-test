@@ -31,7 +31,7 @@ export const Users = () => {
       });
       await res.json();
     } else {
-      const res = await fetch(`${API}/users/${id}`, {
+      const res = await fetch(`${API}/user/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -64,7 +64,7 @@ export const Users = () => {
   const deleteUser = async (id) => {
     const userResponse = window.confirm("Are you sure you want to delete it?");
     if (userResponse) {
-      const res = await fetch(`${API}/users/${id}`, {
+      const res = await fetch(`${API}/user/${id}`, {
         method: "DELETE",
       });
       const data = await res.json();
@@ -74,7 +74,7 @@ export const Users = () => {
   };
 
   const editUser = async (id) => {
-    const res = await fetch(`${API}/users/${id}`);
+    const res = await fetch(`${API}/user/${id}`);
     const data = await res.json();
 
     setEditing(true);
