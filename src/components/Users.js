@@ -1,7 +1,7 @@
   
 import React, { useState, useEffect, useRef } from "react";
 
-const API = 'https://sheltered-river-91935.herokuapp.com/';
+const API = 'https://sheltered-river-91935.herokuapp.com';
 
 export const Users = () => {
   const [name, setName] = useState("");
